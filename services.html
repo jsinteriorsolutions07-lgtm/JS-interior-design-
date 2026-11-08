@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Services | JS Interior Design</title>
+
+<meta name="description" content="Explore premium interior design, POP ceiling, gypsum ceiling, PVC panels, 2D and 3D interior design services by JS Interior Design.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #171714;
+    --gold: #b79a68;
+    --cream: #f7f5f0;
+    --white: #ffffff;
+    --text: #62625c;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    width: 88%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 22px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-cta {
+    border: 1px solid var(--gold);
+    padding: 10px 20px;
+    color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+    linear-gradient(90deg, rgba(15,15,13,.85), rgba(15,15,13,.2)),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+    margin: 22px 0;
+}
+
+.hero p {
+    color: #e4e2dc;
+    max-width: 570px;
+    font-size: 17px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: #171714;
+    padding: 15px 28px;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* INTRO */
+
+.intro {
+    padding: 100px 0 65px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    max-width: 750px;
+    margin: 15px auto;
+    line-height: 1.3;
+}
+
+.intro p {
+    color: var(--text);
+    max-width: 650px;
+    margin: auto;
+}
+
+/* SERVICES */
+
+.services-section {
+    padding: 35px 0 100px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.service-card {
+    background: white;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.08);
+}
+
+.service-card img {
+    height: 260px;
+    transition: .5s;
+}
+
+.service-card:hover img {
+    transform: scale(1.04);
+}
+
+.service-content {
+    padding: 28px;
+}
+
+.service-number {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.service-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.service-content p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #9b7a45;
+}
+
+/* FEATURE SECTION */
+
+.feature {
+    background: var(--dark);
+    color: white;
+    padding: 90px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.feature img {
+    height: 450px;
+}
+
+.feature h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.25;
+    margin: 18px 0;
+}
+
+.feature p {
+    color: #c7c7c0;
+}
+
+.feature-list {
+    margin-top: 25px;
+    list-style: none;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    color: #e5e2da;
+}
+
+.feature-list li::before {
+    content: "✦";
+    color: var(--gold);
+    margin-right: 12px;
+}
+
+/* PROCESS */
+
+.process {
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 46px);
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--text);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.process-card {
+    border-top: 1px solid #d5c8b0;
+    padding-top: 25px;
+}
+
+.process-card span {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.process-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.process-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* CTA */
+
+.cta {
+    padding: 90px 0;
+    text-align: center;
+    background:
+    linear-gradient(rgba(20,20,18,.8), rgba(20,20,18,.8)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 55px);
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+.cta p {
+    color: #ddd;
+}
+
+/* FOOTER */
+
+footer {
+    background: #11110f;
+    color: #ccc;
+    padding: 50px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+footer p, footer a {
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer a {
+    display: block;
+    margin: 7px 0;
+}
+
+footer a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 5px 20px #0003;
+    z-index: 999;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 600px) {
+    .services-grid,
+    .process-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .service-card img {
+        height: 230px;
+    }
+
+    .feature img {
+        height: 300px;
+    }
+
+    .intro {
+        padding: 65px 0 40px;
+    }
+
+    .whatsapp {
+        right: 12px;
+        bottom: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            JS <span>INTERIOR DESIGN</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="nav-cta">Get in Touch</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="container hero-content">
+
+        <div class="eyebrow">Our Services</div>
+
+        <h1>Beautiful Spaces.<br>Exceptional Living.</h1>
+
+        <p>
+            Thoughtfully designed interiors that combine creativity,
+            functionality and timeless elegance. Discover the services
+            that bring your dream space to life.
+        </p>
+
+        <a href="#services" class="button">Explore Our Services ↗</a>
+
+    </div>
+</section>
+
+<!-- INTRO -->
+
+<section class="intro container">
+
+    <div class="eyebrow">What We Do</div>
+
+    <h2>Transforming Spaces Into Experiences</h2>
+
+    <p>
+        From elegant ceilings to complete interior concepts,
+        JS Interior Design brings your ideas to life through
+        thoughtful design, beautiful details and quality workmanship.
+    </p>
+
+</section>
+
+<!-- SERVICE CARDS -->
+
+<section class="services-section container" id="services">
+
+    <div class="services-grid">
+
+        <article class="service-card">
+
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Modern home interior">
+
+            <div class="service-content">
+                <div class="service-number">01 / INTERIOR</div>
+                <h3>Complete Interior Design</h3>
+
+                <p>
+                    Thoughtful interior concepts for homes, apartments,
+                    bedrooms, living rooms and commercial spaces.
+                </p>
+
+                <a href="contact.html" class="service-link">DISCUSS YOUR PROJECT ↗</a>
+            </div>
+
+        </article>
+
+        <article class="service-card">
+
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Designer false ceiling">
+
+            <div class="service-content">
+                <div class="service-number">02 / CEILING</div>
+                <h3>POP Ceiling Design</h3>
+
+                <p>
+                    Stylish POP ceiling designs with elegant shapes,
+                    decorative details and modern lighting concepts.
+                </p>
+
+                <a href="contact.html" class="service-link">DISCUSS YOUR PROJECT ↗</a>
+            </div>
+
+        </article>
+
+        <article class="service-card">
+
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Gypsum ceiling interior">
+
+            <div class="service-content">
+                <div class="service-number">03 / CEILING</div>
+                <h3>Gypsum False Ceiling</h3>
+
+                <p>
+                    Modern gypsum ceilings designed for clean finishes,
+                    stylish interiors and integrated lighting.
+                </p>
+
+                <a href="contact.html" class="service-link">DISCUSS YOUR PROJECT ↗</a>
+            </div>
+
+        </article>
+
+        <article class="service-card">
+
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85" alt="Decorative interior wall panels">
+
+            <div class="service-content">
+                <div class="service-number">04 / WALLS</div>
+                <h3>PVC Ceiling & Wall Panels</h3>
+
+                <p>
+                    Decorative PVC panels and ceiling solutions
+                    to enhance the look of your interior spaces.
+                </p>
+
+                <a href="contact.html" class="service-link">DISCUSS YOUR PROJECT ↗</a>
+            </div>
+
+        </article>
+
+        <article class="service-card">
+
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Interior design planning">
+
+            <div class="service-content">
+                <div class="service-number">05 / PLANNING</div>
+                <h3>2D & 3D Interior Design</h3>
+
+                <p>
+                    Visualize your ideas with interior layouts,
+                    space planning and realistic 3D concepts.
+                </p>
+
+                <a href="contact.html" class="service-link">DISCUSS YOUR PROJECT ↗</a>
+            </div>
+
+        </article>
+
+        <article class="service-card">
+
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Luxury bedroom interior">
+
+            <div class="service-content">
+                <div class="service-number">06 / DECOR</div>
+                <h3>Wall & Decorative Design</h3>
+
+                <p>
+                    Feature walls, decorative elements and modern
+                    design details that give your space character.
+                </p>
+
+                <a href="contact.html" class="service-link">DISCUSS YOUR PROJECT ↗</a>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- FEATURE -->
+
+<section class="feature">
+
+    <div class="container feature-grid">
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85" alt="Elegant living room design">
+        </div>
+
+        <div>
+
+            <div class="eyebrow">Our Design Philosophy</div>
+
+            <h2>Design That Reflects Your Lifestyle</h2>
+
+            <p>
+                Every space has its own story. We focus on understanding
+                your requirements and creating interior concepts that
+                balance beauty, comfort and functionality.
+            </p>
+
+            <ul class="feature-list">
+                <li>Modern and creative design concepts</li>
+                <li>Smart space planning</li>
+                <li>Attention to detail</li>
+                <li>Designs tailored to your requirements</li>
+                <li>Residential and commercial interiors</li>
+            </ul>
+
+            <a href="contact.html" class="button">Start Your Project ↗</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section class="process container">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">How We Work</div>
+
+        <h2>From Vision to Reality</h2>
+
+        <p>A simple process to help bring your interior ideas to life.</p>
+
+    </div>
+
+    <div class="process-grid">
+
+        <div class="process-card">
+            <span>STEP 01</span>
+            <h3>Consultation</h3>
+            <p>Understand your ideas, needs, space and design preferences.</p>
+        </div>
+
+        <div class="process-card">
+            <span>STEP 02</span>
+            <h3>Design Planning</h3>
+            <p>Develop suitable concepts, layouts and design directions.</p>
+        </div>
+
+        <div class="process-card">
+            <span>STEP 03</span>
+            <h3>Material Selection</h3>
+            <p>Explore finishes, colors, materials and design details.</p>
+        </div>
+
+        <div class="process-card">
+            <span>STEP 04</span>
+            <h3>Project Execution</h3>
+            <p>Move forward with the agreed design and project plan.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="eyebrow">Let's Create Together</div>
+
+        <h2>Ready to Transform Your Space?</h2>
+
+        <p>
+            Tell us about your interior project and let's discuss
+            your ideas.
+        </p>
+
+        <a href="contact.html" class="button">Request a Consultation ↗</a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>JS Interior Design</h3>
+
+                <p>
+                    Creating beautiful interiors through modern design,
+                    thoughtful planning and elegant details.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div>
+                <h3>Our Services</h3>
+                <a href="#services">Interior Design</a>
+                <a href="#services">POP Ceiling</a>
+                <a href="#services">Gypsum Ceiling</a>
+                <a href="#services">PVC Panels</a>
+                <a href="#services">2D & 3D Design</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 JS Interior Design. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- WHATSAPP: Replace 9931203143 with your number -->
+
+<a class="whatsapp"
+   href="https://wa.me/919931203143"
+   target="_blank">
+   WhatsApp Us
+</a>
+
+</body>
+</html>
