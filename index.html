@@ -2,257 +2,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JS Interior Design | Interior Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root {
-  --navy:#101d30;
-  --gold:#d6a23b;
-  --green:#25d366;
-  --light:#f4f5f7;
-  --white:#fff;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:var(--light);color:#222}
-a{text-decoration:none}
-header{background:var(--navy);color:white;padding:18px 5%;position:sticky;top:0;z-index:100}
-.brand{display:flex;align-items:center;gap:12px}
-.brand-icon{font-size:35px;color:var(--gold)}
-.brand h2{font-size:22px;color:var(--gold)}
-.brand p{font-size:12px;color:#ddd;margin-top:4px}
-nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-nav a{background:#24344d;color:white;padding:12px 18px;border-radius:10px}
-nav a:hover{background:var(--gold);color:#111}
-.quote{display:block;background:var(--gold);color:#111;text-align:center;padding:14px;border-radius:10px;font-weight:bold;margin-top:12px}
-.hero{min-height:440px;background:linear-gradient(90deg,#000b,#0003),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85') center/cover;display:flex;align-items:center;padding:55px 7%;color:white}
-.hero h1{font-size:clamp(32px,5vw,55px);max-width:650px;line-height:1.15}
-.hero h1 span{color:var(--gold)}
-.hero p{font-size:18px;line-height:1.7;margin-top:18px;max-width:600px}
-.btn{display:inline-block;background:var(--gold);color:#111;padding:14px 22px;border-radius:8px;font-weight:bold;margin-top:22px}
-section{padding:55px 5%}
-.heading{text-align:center;margin-bottom:28px}
-.heading h2{font-size:30px;color:var(--navy)}
-.heading h2 span{color:var(--gold)}
-.heading p{margin-top:8px;color:#777}
-.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.service{background:white;border-radius:12px;overflow:hidden;box-shadow:0 3px 12px #0001;transition:.2s}
-.service:hover{transform:translateY(-4px)}
-.service img{width:100%;height:150px;object-fit:cover}
-.service h3{padding:15px;font-size:17px}
-.service p{padding:0 15px 15px;color:#666;font-size:14px;line-height:1.5}
-.gallery-section{background:var(--navy);color:white}
-.gallery-section h2{color:white}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.gallery img{width:100%;height:200px;object-fit:cover;border-radius:10px;border:2px solid var(--gold)}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.about img{width:100%;border-radius:12px}
-.about p{line-height:1.8;color:#555;margin-top:15px}
-.contact{background:var(--navy);color:white;text-align:center}
-.contact h2{color:white}
-.contact p{margin:14px 0}
-.contact a{color:var(--gold)}
-.social{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px}
-.social a{background:#263951;padding:12px 18px;border-radius:8px}
-footer{background:#080e17;color:#ccc;text-align:center;padding:20px;font-size:14px}
-.bottom-nav{display:none}
-.whatsapp-float{position:fixed;right:18px;bottom:22px;background:var(--green);color:white;padding:15px 18px;border-radius:50%;font-size:23px;z-index:99;box-shadow:0 3px 12px #0003}
-@media(max-width:850px){
-.services{grid-template-columns:repeat(2,1fr)}
-.gallery{grid-template-columns:repeat(2,1fr)}
-.about{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-header{padding:14px 4%}
-.brand h2{font-size:18px}
-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-nav a{text-align:center;padding:11px 5px;font-size:13px}
-.hero{min-height:400px;padding:35px 6%}
-.hero h1{font-size:34px}
-.hero p{font-size:15px}
-section{padding:40px 4%}
-.heading h2{font-size:25px}
-.services{gap:10px}
-.service img{height:125px}
-.service h3{font-size:15px;padding:10px}
-.service p{font-size:12px;padding:0 10px 12px}
-.gallery{gap:9px}
-.gallery img{height:140px}
-.bottom-nav{display:flex;position:fixed;bottom:0;left:0;width:100%;background:white;border-top:1px solid #ddd;z-index:100}
-.bottom-nav a{width:50%;text-align:center;padding:12px;color:#555;font-weight:bold}
-.bottom-nav a:first-child{color:var(--gold)}
-body{padding-bottom:55px}
-.whatsapp-float{bottom:70px}
-}
-</style>
+    <title>JS Interior Design | Modern Interior Solutions</title>
+
+    <meta name="description" content="JS Interior Design - POP, gypsum ceiling, PVC panels, modern interior design and 2D/3D design solutions.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f7f4;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #171717;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #d8b477;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d8b477;
+        }
+
+        .hero {
+            min-height: 85vh;
+            background:
+                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 65px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #d8b477;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #eee;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #c49a5a;
+            color: #111;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background: #e0bd82;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #222;
+        }
+
+        .section-title p {
+            color: #777;
+            margin-top: 8px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0,0,0,.06);
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .service-card h3 {
+            color: #b18a4e;
+            margin-bottom: 12px;
+        }
+
+        .about {
+            background: #222;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .about h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #d8b477;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        .contact {
+            background: #eee9e0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #171717;
+            color: #ccc;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px #0003;
+            z-index: 1000;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 5px 8px;
+                display: inline-block;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-<div class="brand">
-<div class="brand-icon">🏠</div>
-<div>
-<h2>JS INTERIOR SOLUTIONS</h2>
-<p>Design • Decor • Transform</p>
-</div>
-</div>
+    <div class="logo">JS INTERIOR DESIGN</div>
 
-<nav>
-<a href="#home">🏠 Home</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<a class="quote" href="https://wa.me/91XXXXXXXXXX">
-💬 Get Quote on WhatsApp
-</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<section class="hero" id="home">
-<div>
-<h1>Transform Your Space Into Something <span>Beautiful</span></h1>
-<p>Professional Interior Design, POP Work, Gypsum Ceiling,
-PVC Ceiling & 2D/3D Designs.</p>
-<a class="btn" href="#services">Explore Our Designs →</a>
-</div>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Design Your Dream <span>Interior</span></h1>
+
+        <p>
+            Transform your home and commercial spaces with modern
+            interior design, POP, gypsum ceiling, PVC and premium
+            interior solutions.
+        </p>
+
+        <a href="services.html" class="btn">Explore Our Services</a>
+
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
 </section>
 
-<section id="services">
-<div class="heading">
-<h2>Our <span>Services</span></h2>
-<p>Complete Interior Solutions Under One Roof</p>
-</div>
+<section>
+    <div class="section-title">
+        <h2>Our Interior Services</h2>
+        <p>Creative designs. Quality work. Beautiful spaces.</p>
+    </div>
 
-<div class="services">
+    <div class="services">
 
-<div class="service">
-<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80">
-<h3>POP Ceiling Design</h3>
-<p>Elegant POP ceiling and decorative designs.</p>
-</div>
+        <div class="service-card">
+            <h3>POP Design</h3>
+            <p>Elegant POP ceiling designs for modern homes and offices.</p>
+        </div>
 
-<div class="service">
-<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80">
-<h3>Gypsum Ceiling</h3>
-<p>Modern false ceiling with stylish lighting.</p>
-</div>
+        <div class="service-card">
+            <h3>Gypsum Ceiling</h3>
+            <p>Modern gypsum false ceilings with stylish lighting options.</p>
+        </div>
 
-<div class="service">
-<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80">
-<h3>PVC Ceiling</h3>
-<p>Beautiful PVC ceiling for homes and offices.</p>
-</div>
+        <div class="service-card">
+            <h3>PVC Ceiling & Panels</h3>
+            <p>Beautiful PVC ceilings and decorative wall panel solutions.</p>
+        </div>
 
-<div class="service">
-<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80">
-<h3>Interior Design</h3>
-<p>Modern living room and bedroom interiors.</p>
-</div>
+        <div class="service-card">
+            <h3>2D & 3D Interior Design</h3>
+            <p>Visualize your dream interior with professional design concepts.</p>
+        </div>
 
-<div class="service">
-<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=80">
-<h3>2D Drawing</h3>
-<p>Professional floor plans and layouts.</p>
-</div>
+        <div class="service-card">
+            <h3>Wall Design</h3>
+            <p>Feature walls, decorative panels and modern wall finishes.</p>
+        </div>
 
-<div class="service">
-<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80">
-<h3>3D Design</h3>
-<p>Realistic 3D visualization of your space.</p>
-</div>
+        <div class="service-card">
+            <h3>Complete Interior</h3>
+            <p>Interior solutions for homes, bedrooms, halls and offices.</p>
+        </div>
 
-<div class="service">
-<img src="https://images.unsplash.com/photo-161 спаль?auto=format&fit=crop&w=700&q=80">
-<h3>Bedroom Design</h3>
-<p>Comfortable and modern bedroom interiors.</p>
-</div>
-
-<div class="service">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80">
-<h3>Kitchen Design</h3>
-<p>Beautiful and functional kitchen interiors.</p>
-</div>
-
-</div>
+    </div>
 </section>
 
-<section class="gallery-section" id="gallery">
-<div class="heading">
-<h2>Our Design <span>Gallery</span></h2>
-<p style="color:#ddd">Explore Our Latest Interior Work</p>
-</div>
+<section class="about">
+    <div>
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+             alt="Modern interior design">
+    </div>
 
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80">
-<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80">
-<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80">
-<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80">
-</div>
+    <div>
+        <h2>Welcome to JS Interior Design</h2>
 
-<div style="text-align:center">
-<a class="btn" href="#contact">View More / Enquire →</a>
-</div>
+        <p>
+            We believe every space deserves a beautiful design.
+            Our focus is on modern interiors, creative concepts,
+            quality workmanship and customer satisfaction.
+        </p>
+
+        <br>
+
+        <p>
+            From stylish ceilings to complete interior solutions,
+            we help turn your ideas into beautiful spaces.
+        </p>
+
+        <br>
+
+        <a href="about.html" class="btn">Know More About Us</a>
+    </div>
 </section>
 
-<section id="about">
-<div class="about">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80">
+<section>
+    <div class="section-title">
+        <h2>Our Design Inspiration</h2>
+        <p>Explore beautiful modern interior ideas.</p>
+    </div>
 
-<div>
-<h2>About <span style="color:#c69a53">JS Interior Solutions</span></h2>
-<p>
-Welcome to JS Interior design. We provide interior design,
-POP, gypsum ceiling, PVC ceiling, 2D drawings and 3D design services.
-Our goal is to create beautiful, modern and functional spaces
-according to your requirements and budget.
-</p>
-<p>✔ Creative Designs<br>
-✔ Quality Work<br>
-✔ Customer Satisfaction</p>
-<a class="btn" href="#contact">Know More →</a>
-</div>
-</div>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85"
+             alt="Modern living room">
+
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85"
+             alt="Luxury interior">
+
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=85"
+             alt="Modern bedroom">
+
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85"
+             alt="Elegant home interior">
+    </div>
 </section>
 
-<section class="contact" id="contact">
-<div class="heading">
-<h2>Contact <span>Us</span></h2>
-<p style="color:#ddd">Let's Discuss Your Dream Project</p>
-</div>
+<section class="contact">
+    <h2>Let's Create Something Beautiful</h2>
 
-<p>📞 <a href="tel:+919931203143">+91 9931203143 — Call Now</a></p>
-<p>✉️ <a href="mailto:yourmail@gmail.com">jsinteriorsolutions07@gmail.com</a></p>
-<p>📍 Indore, Madhya Pradesh, India</p>
+    <p>Have a home, office or interior project in mind?</p>
 
-<div class="social">
-<a href="https://instagram.com/">jsinterior07</a>
-<a href="https://facebook.com/">Facebook</a>
-<a href="https://t.me/">@kingyusif</a>
-<a href="https://youtube.com/">YouTube</a>
-</div>
+    <br>
 
-<a class="btn" style="background:#25d366;color:white"
-href="https://wa.me/919931203143">
-💬 Chat on WhatsApp
-</a>
+    <a href="contact.html" class="btn">Get in Touch</a>
 </section>
 
 <footer>
-© 2026 JS Interior Design. All Rights Reserved.
-<br><br>Designed with ❤️ for Beautiful Spaces
+    <p>© 2026 JS Interior Design. All Rights Reserved.</p>
+    <p>Interior Design | POP | Gypsum | PVC | 2D & 3D Design</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/919931203143">☏</a>
-
-<div class="bottom-nav">
-<a href="#home">🏠<br>Home</a>
-<a href="#contact">👤<br>Contact</a>
-</div>
+<!-- Replace the number below with your WhatsApp number -->
+<a class="whatsapp"
+   href="https://wa.me/919931203143"
+   target="_blank">
+    WhatsApp Us
+</a>
 
 </body>
 </html>
