@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Interior Gallery | JS Interior Design</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f7f5f0;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 88%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+header {
+    background: #171714;
+    color: white;
+    padding: 22px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #b79a68;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b79a68;
+}
+
+.hero {
+    background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero small {
+    color: #d1b27c;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 70px);
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #ddd;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.heading p {
+    color: #777;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: .5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.caption {
+    background: white;
+    padding: 20px;
+}
+
+.caption h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.caption p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.note {
+    background: #222;
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.note h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.note p {
+    color: #ccc;
+}
+
+.button {
+    display: inline-block;
+    background: #b79a68;
+    color: #171714;
+    padding: 14px 28px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 14px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+@media(max-width: 850px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 550px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 270px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .heading h2 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            JS <span>INTERIOR DESIGN</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero">
+
+    <small>Our Portfolio</small>
+
+    <h1>Spaces That Inspire</h1>
+
+    <p>
+        Discover elegant interiors, modern ceiling designs
+        and creative spaces designed to inspire.
+    </p>
+
+</section>
+
+<section class="section container">
+
+    <div class="heading">
+
+        <h2>Interior Design Gallery</h2>
+
+        <p>
+            Explore our design inspiration and interior concepts.
+        </p>
+
+    </div>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Luxury living room">
+            <div class="caption">
+                <h3>Luxury Living Room</h3>
+                <p>Modern residential interior</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Elegant home interior">
+            <div class="caption">
+                <h3>Elegant Interior</h3>
+                <p>Contemporary home design</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Modern bedroom">
+            <div class="caption">
+                <h3>Modern Bedroom</h3>
+                <p>Comfort meets style</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Modern interior decor">
+            <div class="caption">
+                <h3>Interior Decoration</h3>
+                <p>Beautiful decorative details</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85" alt="Interior wall design">
+            <div class="caption">
+                <h3>Wall Design</h3>
+                <p>Creative wall styling</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Premium interior">
+            <div class="caption">
+                <h3>Premium Interiors</h3>
+                <p>Timeless interior inspiration</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="note">
+
+    <div class="container">
+
+        <h2>Have a Project in Mind?</h2>
+
+        <p>
+            Let's turn your interior ideas into beautiful spaces.
+        </p>
+
+        <a href="contact.html" class="button">
+            Discuss Your Project ↗
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 JS Interior Design. All Rights Reserved.</p>
+
+    <p>Interior Design | POP | Gypsum | PVC | 2D & 3D</p>
+
+</footer>
+
+<!-- Replace XXXXXXXXXX with your WhatsApp number -->
+
+<a class="whatsapp"
+   href="https://wa.me/919931203143"
+   target="_blank">
+   WhatsApp Us
+</a>
+
+</body>
+</html>
