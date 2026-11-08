@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | JS Interior Design</title>
+
+<meta name="description" content="Contact JS Interior Design for POP, gypsum ceiling, PVC, interior design and 2D/3D design inquiries.">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #171714;
+    --gold: #b79a68;
+    --cream: #f7f5f0;
+    --text: #666660;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: #222;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 22px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+    background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 68px);
+    margin: 18px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #ddd;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 46px);
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--text);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+    transition: .3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.07);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 18px;
+    background: #f3eee4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.contact-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.contact-card a {
+    color: #9b7a45;
+    font-weight: bold;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* FORM */
+
+.inquiry {
+    background: white;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.inquiry-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.inquiry-info p {
+    color: var(--text);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--gold);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: #171714;
+    padding: 15px 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.button:hover {
+    background: #d0b17c;
+}
+
+/* LOCATION */
+
+.location {
+    background: #eae5dc;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.location h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.location p {
+    color: var(--text);
+}
+
+/* FOOTER */
+
+footer {
+    background: #11110f;
+    color: #aaa;
+    padding: 35px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    z-index: 999;
+}
+
+/* MOBILE */
+
+@media(max-width: 850px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inquiry {
+        grid-template-columns: 1fr;
+        padding: 35px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+}
+
+@media(max-width: 550px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inquiry {
+        padding: 25px 18px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            JS <span>INTERIOR DESIGN</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="eyebrow">Get in Touch</div>
+
+    <h1>Let's Talk About Your Space</h1>
+
+    <p>
+        Have a project in mind? Contact us to discuss your
+        interior design ideas and requirements.
+    </p>
+
+</section>
+
+<!-- CONTACT DETAILS -->
+
+<section class="contact-section container">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">Contact Information</div>
+
+        <h2>We'd Love to Hear From You</h2>
+
+        <p>
+            Reach out to us through your preferred contact method.
+        </p>
+
+    </div>
+
+    <div class="contact-grid">
+
+        <!-- PHONE -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">☎</div>
+
+            <h3>Call Us</h3>
+
+            <p>Speak directly with us about your project.</p>
+
+            <a href="tel:+91XXXXXXXXXX">
+                +91 9931203143
+            </a>
+
+        </div>
+
+        <!-- WHATSAPP -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">◉</div>
+
+            <h3>WhatsApp</h3>
+
+            <p>Send us your interior design requirements.</p>
+
+            <a href="https://wa.me/919931203143" target="_blank">
+                Chat on WhatsApp ↗
+            </a>
+
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">✉</div>
+
+            <h3>Email</h3>
+
+            <p>Send us your project details by email.</p>
+
+            <a href="mailto:YOUR_EMAIL@gmail.com">
+                JSinteriorsolution07@gmail.com
+            </a>
+
+        </div>
+
+        <!-- INSTAGRAM -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">◎</div>
+
+            <h3>Instagram</h3>
+
+            <p>Explore our design inspiration and updates.</p>
+
+            <a href="https://instagram.com/jsinterior07" target="_blank">
+                Follow on Instagram ↗
+            </a>
+
+        </div>
+
+        <!-- FACEBOOK -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">f</div>
+
+            <h3>Facebook</h3>
+
+            <p>Connect with us on Facebook.</p>
+
+            <a href="https://facebook.com/https://www.facebook.com/share/1DcRWpDNN5/" target="_blank">
+                Visit Facebook Page ↗
+            </a>
+
+        </div>
+
+        <!-- TELEGRAM -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">➤</div>
+
+            <h3>Telegram</h3>
+
+            <p>Connect with us on Telegram.</p>
+
+            <a href="https://t.me/@kingyusif" target="_blank">
+                Message on Telegram ↗
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT INQUIRY FORM -->
+
+    <div class="inquiry">
+
+        <div class="inquiry-info">
+
+            <div class="eyebrow">Project Inquiry</div>
+
+            <h2>Tell Us About Your Dream Interior</h2>
+
+            <p>
+                Share a few details about your project.
+                We would love to understand your ideas
+                and help you plan your space.
+            </p>
+
+            <br>
+
+            <p>
+                Interior Design<br>
+                POP & Gypsum Ceiling<br>
+                PVC Ceiling & Panels<br>
+                2D & 3D Design
+            </p>
+
+        </div>
+
+        <form id="inquiryForm">
+
+            <input type="text"
+                   id="name"
+                   placeholder="js interior design"
+                   required>
+
+            <input type="tel"
+                   id="phone"
+                   placeholder="9931203143"
+                   required>
+
+            <input type="email"
+                   id="email"
+                   placeholder="JSinteriorsolution07@gmail.com">
+
+            <select id="service" required>
+
+                <option value="">Select Your Service</option>
+                <option>Complete Interior Design</option>
+                <option>POP Ceiling</option>
+                <option>Gypsum Ceiling</option>
+                <option>PVC Ceiling & Panels</option>
+                <option>2D & 3D Interior Design</option>
+                <option>Wall Design</option>
+                <option>Other Interior Work</option>
+
+            </select>
+
+            <textarea id="message"
+                      placeholder="Tell us about your project..."
+                      required></textarea>
+
+            <button type="submit" class="button">
+                Send Inquiry via WhatsApp ↗
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- LOCATION -->
+
+<section class="location">
+
+    <div class="container">
+
+        <div class="eyebrow">Our Location</div>
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            Serving customers with creative interior design
+            and modern interior solutions.
+        </p>
+
+        <p>
+            Replace this text with your business address.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <p>© 2026 JS Interior Design. All Rights Reserved.</p>
+
+        <p>Interior Design | POP | Gypsum | PVC | 2D & 3D</p>
+
+    </div>
+
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a class="whatsapp"
+   href="https://wa.me/919931203143"
+   target="_blank">
+   WhatsApp Us
+</a>
+
+<script>
+document.getElementById("inquiryForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const businessNumber = "919931203143";
+
+    const name = document.getElementById("JS interior design").value;
+    const phone = document.getElementById("9931203143").value;
+    const email = document.getElementById("jsinteriorsolution07@gmail.com").value;
+    const service = document.getElementById("GYPSUM| POP | PVC|").value;
+    const message = document.getElementById("9931203143").value;
+
+    const text =
+        "Interior Design Inquiry%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Email: " + encodeURIComponent(email) + "%0A" +
+        "Service: " + encodeURIComponent(service) + "%0A" +
+        "Project Details: " + encodeURIComponent(message);
+
+    window.open("https://wa.me/" + businessNumber + "?text=" + text, "_blank");
+
+});
+</script>
+
+</body>
+</html>
