@@ -5,341 +5,373 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us | JS Interior Design</title>
+<title>JS Interior Design | Luxury Interiors</title>
 
-<meta name="description" content="Discover JS Interior Design, our interior design philosophy, creative vision and interior services.">
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --gold: #c9a46a;
+  --black: #171613;
+  --cream: #f8f4ec;
+  --white: #ffffff;
 }
 
-:root {
-    --dark: #171714;
-    --gold: #b79a68;
-    --cream: #f7f5f0;
-    --text: #666660;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: #222;
-    line-height: 1.7;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--black);
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-.container {
-    width: 88%;
-    max-width: 1250px;
-    margin: auto;
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
-/* HEADER */
+/* NAVBAR */
 
 header {
-    background: var(--dark);
-    color: white;
-    padding: 22px 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+  background: #171613;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: bold;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 700;
 }
 
 .logo span {
-    color: var(--gold);
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: white;
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 nav a {
-    font-size: 14px;
+  color: white;
+  font-size: 13px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    color: var(--gold);
+  color: var(--gold);
 }
 
 /* HERO */
 
 .hero {
-    min-height: 520px;
-    background:
-    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.45)),
-    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85");
+  min-height: 90vh;
+  background:
+  linear-gradient(90deg, rgba(15,14,12,.88), rgba(15,14,12,.2)),
+  url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90');
 
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    align-items: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  color: white;
 }
 
 .hero-content {
-    max-width: 750px;
-    padding: 90px 0;
+  max-width: 750px;
 }
 
-.eyebrow {
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 12px;
-    font-weight: bold;
+.tagline {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 6vw, 75px);
-    line-height: 1.15;
-    margin: 20px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.script {
+  font-family: 'Dancing Script', cursive;
+  color: var(--gold);
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 25px;
 }
 
 .hero p {
-    color: #ddd;
-    font-size: 17px;
-    max-width: 600px;
+  color: #e5e2dc;
+  max-width: 560px;
+  line-height: 1.9;
+  margin-bottom: 35px;
 }
 
-/* ABOUT */
-
-.about {
-    padding: 100px 0;
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #171613;
+  padding: 15px 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: .3s;
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
+.btn:hover {
+  background: white;
+  transform: translateY(-3px);
 }
 
-.about-image {
-    position: relative;
+.btn-outline {
+  display: inline-block;
+  border: 1px solid white;
+  color: white;
+  padding: 14px 28px;
+  margin-left: 12px;
 }
 
-.about-image img {
-    width: 100%;
-    height: 520px;
-    object-fit: cover;
+/* INTRO */
+
+.intro {
+  padding: 100px 8%;
+  text-align: center;
 }
 
-.image-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: white;
-    padding: 18px 25px;
-    font-size: 13px;
-    letter-spacing: 1px;
+.small-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  color: #a17a43;
+  margin-bottom: 10px;
 }
 
-.about-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 4vw, 48px);
-    line-height: 1.25;
-    margin: 18px 0;
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 48px);
+  margin-bottom: 25px;
 }
 
-.about-content p {
-    color: var(--text);
-    margin-bottom: 18px;
+.intro h2 span {
+  color: #a17a43;
 }
 
-.button {
-    display: inline-block;
-    background: var(--gold);
-    color: #171714;
-    padding: 14px 28px;
-    margin-top: 15px;
-    font-weight: bold;
-    transition: .3s;
+.intro p {
+  max-width: 750px;
+  margin: auto;
+  color: #6c6861;
+  line-height: 1.9;
 }
 
-.button:hover {
-    background: #d0b17c;
-    transform: translateY(-3px);
-}
+/* SERVICES */
 
-/* PHILOSOPHY */
-
-.philosophy {
-    background: var(--dark);
-    color: white;
-    padding: 90px 0;
-    text-align: center;
-}
-
-.philosophy h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 4vw, 48px);
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.philosophy p {
-    color: #c9c9c2;
-    max-width: 700px;
-    margin: auto;
-}
-
-/* VALUES */
-
-.values {
-    padding: 100px 0;
+.services {
+  padding: 80px 8%;
+  background: #fff;
 }
 
 .section-heading {
-    text-align: center;
-    margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .section-heading h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    margin: 12px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
 }
 
 .section-heading p {
-    color: var(--text);
+  color: #8a8175;
+  margin-top: 12px;
 }
 
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
-.value-card {
-    background: white;
-    padding: 35px;
-    border-bottom: 3px solid var(--gold);
+.service-card {
+  background: #f8f4ec;
+  overflow: hidden;
+  transition: .35s;
 }
 
-.value-number {
-    font-size: 13px;
-    color: var(--gold);
-    letter-spacing: 2px;
-    font-weight: bold;
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px #00000015;
 }
 
-.value-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin: 15px 0;
+.service-card img {
+  height: 260px;
 }
 
-.value-card p {
-    color: var(--text);
-    font-size: 14px;
+.service-card div {
+  padding: 25px;
 }
 
-/* DESIGN IMAGE */
-
-.design-image {
-    height: 450px;
-    background:
-    linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85");
-
-    background-size: cover;
-    background-position: center;
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 12px;
 }
 
-/* CTA */
+.service-card p {
+  color: #777;
+  line-height: 1.7;
+}
+
+/* FEATURE */
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding: 100px 8%;
+}
+
+.feature img {
+  height: 500px;
+}
+
+.feature h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.feature h2 span {
+  color: #a17a43;
+}
+
+.feature p {
+  line-height: 1.9;
+  color: #6c6861;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  background: #e9d8b9;
+  padding: 3px 8px;
+  font-weight: 700;
+}
+
+/* CALL TO ACTION */
 
 .cta {
-    background: #eae5dc;
-    text-align: center;
-    padding: 85px 20px;
+  background: #171613;
+  color: white;
+  text-align: center;
+  padding: 90px 8%;
 }
 
 .cta h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 4vw, 48px);
-    margin: 15px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  margin-bottom: 15px;
 }
 
-.cta p {
-    color: var(--text);
+.cta .script {
+  margin-bottom: 20px;
 }
 
 /* FOOTER */
 
 footer {
-    background: #11110f;
-    color: #aaa;
-    padding: 35px 0;
-    text-align: center;
+  background: #0e0d0b;
+  color: white;
+  padding: 35px 8%;
+  text-align: center;
 }
 
 footer p {
-    font-size: 14px;
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 10px;
 }
 
-/* WHATSAPP */
-
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 14px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    z-index: 999;
+footer span {
+  color: var(--gold);
 }
 
 /* MOBILE */
 
-@media(max-width: 800px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
+@media(max-width: 850px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .about-image img {
-        height: 350px;
-    }
+  nav {
+    justify-content: center;
+    gap: 15px;
+  }
 
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .navbar {
-        flex-direction: column;
-    }
+  .feature {
+    grid-template-columns: 1fr;
+  }
 
-    nav {
-        justify-content: center;
-        gap: 13px;
-    }
+  .feature img {
+    height: 350px;
+  }
+}
 
-    .design-image {
-        height: 300px;
-    }
+@media(max-width: 550px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 60px 6%;
+  }
+
+  .btn-outline {
+    margin: 15px 0 0;
+  }
+
+  .intro,
+  .services,
+  .feature {
+    padding: 60px 6%;
+  }
 }
 </style>
 </head>
@@ -347,220 +379,158 @@ footer p {
 <body>
 
 <header>
-    <div class="container navbar">
+  <a href="index.html" class="logo">
+    JS INTERIOR
+    <span>DESIGN STUDIO</span>
+  </a>
 
-        <a href="index.html" class="logo">
-            JS <span>INTERIOR DESIGN</span>
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-    </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
+  <div class="hero-content">
 
-    <div class="container hero-content">
+    <div class="tagline">Luxury Interior Design Studio</div>
 
-        <div class="eyebrow">About JS Interior Design</div>
+    <h1>
+      Design Your<br>
+      Dream <em>Space.</em>
+    </h1>
 
-        <h1>We Create Spaces That Feel Like Home.</h1>
-
-        <p>
-            Thoughtful design, beautiful details and creative
-            interior solutions that transform everyday spaces
-            into something extraordinary.
-        </p>
-
+    <div class="script">
+      Where elegance meets imagination
     </div>
+
+    <p>
+      Transform your home and commercial spaces with
+      beautiful interiors, modern false ceilings,
+      premium wall designs and thoughtful craftsmanship.
+    </p>
+
+    <a href="services.html" class="btn">EXPLORE SERVICES</a>
+
+    <a href="contact.html" class="btn-outline">CONTACT US</a>
+
+  </div>
+</section>
+
+<section class="intro">
+
+  <div class="small-title">Welcome to JS Interior</div>
+
+  <h2>
+    Creating Spaces That<br>
+    <span>Inspire Living</span>
+  </h2>
+
+  <p>
+    We believe every space deserves a unique identity.
+    Our interior solutions combine creativity, modern
+    design and quality workmanship to make your dream
+    interiors a beautiful reality.
+  </p>
 
 </section>
 
-<!-- ABOUT -->
+<section class="services">
 
-<section class="about">
+  <div class="section-heading">
+    <div class="small-title">What We Do</div>
+    <h2>Our Interior Services</h2>
+    <p>Beautiful design. Quality materials. Professional finishing.</p>
+  </div>
 
-    <div class="container about-grid">
+  <div class="service-grid">
 
-        <div class="about-image">
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Luxury interior design">
 
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
-                 alt="Elegant modern interior">
-
-            <div class="image-caption">
-                DESIGN • CREATIVITY • DETAIL
-            </div>
-
-        </div>
-
-        <div class="about-content">
-
-            <div class="eyebrow">Our Story</div>
-
-            <h2>Designing Interiors With Purpose & Passion</h2>
-
-            <p>
-                Welcome to JS Interior Design, where creativity meets
-                functionality and every space has the potential
-                to become something beautiful.
-            </p>
-
-            <p>
-                We focus on modern interior concepts, decorative
-                ceilings, POP, gypsum, PVC solutions and thoughtful
-                space planning for homes and commercial spaces.
-            </p>
-
-            <p>
-                Our goal is to understand your vision and help
-                transform your ideas into interiors that reflect
-                your lifestyle, taste and personality.
-            </p>
-
-            <a href="services.html" class="button">
-                Explore Our Services ↗
-            </a>
-
-        </div>
-
+      <div>
+        <h3>Interior Design</h3>
+        <p>Elegant living rooms, bedrooms and complete home interiors.</p>
+      </div>
     </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Modern gypsum ceiling">
+
+      <div>
+        <h3>POP & Gypsum Ceiling</h3>
+        <p>Modern false ceilings with stylish lighting and finishing.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85" alt="Modern wall interior">
+
+      <div>
+        <h3>PVC & Wall Design</h3>
+        <p>Decorative PVC panels, feature walls and elegant details.</p>
+      </div>
+    </div>
+
+  </div>
 
 </section>
 
-<!-- PHILOSOPHY -->
+<section class="feature">
 
-<section class="philosophy">
+  <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85" alt="Elegant modern interior">
 
-    <div class="container">
+  <div>
+    <div class="small-title">Our Design Philosophy</div>
 
-        <div class="eyebrow">Our Philosophy</div>
+    <h2>
+      Your Space.<br>
+      <span>Your Style.</span>
+    </h2>
 
-        <h2>Good Design Is Not Just About Appearance. It's About How You Feel.</h2>
+    <p>
+      Every project begins with your vision.
+      We focus on design, functionality and detail
+      to create interiors that feel truly yours.
+    </p>
 
-        <p>
-            We believe beautiful interiors should also be practical,
-            comfortable and meaningful. Every detail matters when
-            creating a space that feels truly yours.
-        </p>
+    <p>
+      From <span class="highlight">modern ceilings</span>
+      to complete interior transformations,
+      we bring creativity and craftsmanship together.
+    </p>
 
-    </div>
-
-</section>
-
-<!-- VALUES -->
-
-<section class="values container">
-
-    <div class="section-heading">
-
-        <div class="eyebrow">What Makes Us Different</div>
-
-        <h2>Our Design Values</h2>
-
-        <p>Our approach is guided by creativity, quality and your vision.</p>
-
-    </div>
-
-    <div class="values-grid">
-
-        <div class="value-card">
-
-            <div class="value-number">01 / CREATIVITY</div>
-
-            <h3>Creative Thinking</h3>
-
-            <p>
-                We explore fresh ideas and thoughtful design concepts
-                to make every space unique.
-            </p>
-
-        </div>
-
-        <div class="value-card">
-
-            <div class="value-number">02 / QUALITY</div>
-
-            <h3>Attention to Detail</h3>
-
-            <p>
-                From design elements to finishing touches,
-                every detail contributes to a beautiful result.
-            </p>
-
-        </div>
-
-        <div class="value-card">
-
-            <div class="value-number">03 / CUSTOMER</div>
-
-            <h3>Your Vision Matters</h3>
-
-            <p>
-                Your preferences, needs and ideas are at the heart
-                of every interior design project.
-            </p>
-
-        </div>
-
-    </div>
+    <a href="about.html" class="btn">DISCOVER OUR STORY</a>
+  </div>
 
 </section>
-
-<!-- IMAGE -->
-
-<section class="design-image"></section>
-
-<!-- CTA -->
 
 <section class="cta">
 
-    <div class="container">
+  <div class="small-title">Let's Create Something Beautiful</div>
 
-        <div class="eyebrow">Let's Work Together</div>
+  <h2>Ready to Transform Your Space?</h2>
 
-        <h2>Have a Space You Want to Transform?</h2>
+  <div class="script">Your dream interior starts here.</div>
 
-        <p>
-            Let's discuss your ideas and create something beautiful.
-        </p>
-
-        <a href="contact.html" class="button">
-            Start Your Project ↗
-        </a>
-
-    </div>
+  <a href="contact.html" class="btn">GET IN TOUCH</a>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-    <div class="container">
+  <div class="logo">JS INTERIOR DESIGN</div>
 
-        <p>© 2026 JS Interior Design. All Rights Reserved.</p>
+  <p>
+    POP • Gypsum Ceiling • PVC • Interior Design • 2D & 3D Design
+  </p>
 
-        <p>Interior Design | POP | Gypsum | PVC | 2D & 3D Design</p>
-
-    </div>
+  <p>© 2026 JS Interior Design. All Rights Reserved.</p>
 
 </footer>
-
-<!-- Replace 9931203143 with your WhatsApp number -->
-
-<a class="whatsapp"
-   href="https://wa.me/919931203143"
-   target="_blank">
-   WhatsApp Us
-</a>
 
 </body>
 </html>
