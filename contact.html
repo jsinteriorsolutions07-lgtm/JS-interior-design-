@@ -5,17 +5,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Our Services | JS Interior Design</title>
+<title>Contact | JS Interior Design</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --teal: #087e83;
-  --dark: #17282b;
-  --light: #edf7f6;
+  --navy: #101c2c;
+  --navy-light: #1b2d43;
+  --copper: #d6a36b;
+  --cream: #f7f4ef;
   --white: #ffffff;
-  --text: #26383a;
+  --text: #283647;
+  --muted: #738091;
 }
 
 * {
@@ -29,9 +31,9 @@ html {
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
   color: var(--text);
-  background: #f8fbfa;
 }
 
 a {
@@ -39,16 +41,8 @@ a {
   color: inherit;
 }
 
-img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* NAVIGATION */
-
 header {
-  background: var(--dark);
+  background: var(--navy);
   padding: 20px 7%;
   display: flex;
   align-items: center;
@@ -58,11 +52,9 @@ header {
 }
 
 .logo {
-  color: #6ed8d2;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
+  color: var(--copper);
   font-size: 25px;
-  letter-spacing: -1px;
+  font-weight: 700;
 }
 
 .logo small {
@@ -70,7 +62,7 @@ header {
   color: white;
   font-size: 10px;
   letter-spacing: 4px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 nav {
@@ -86,22 +78,22 @@ nav a {
 }
 
 nav a:hover {
-  color: #6ed8d2;
+  color: var(--copper);
 }
 
 /* HERO */
 
 .hero {
-  min-height: 68vh;
+  min-height: 55vh;
   background:
-    linear-gradient(90deg, rgba(12,38,40,.92), rgba(12,38,40,.35)),
+    linear-gradient(90deg, rgba(12,25,42,.94), rgba(12,25,42,.5)),
     url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90');
 
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
-  padding: 80px 8%;
+  padding: 75px 8%;
   color: white;
 }
 
@@ -109,9 +101,8 @@ nav a:hover {
   max-width: 750px;
 }
 
-.label {
-  color: #6ed8d2;
-  text-transform: uppercase;
+.eyebrow {
+  color: var(--copper);
   font-size: 12px;
   letter-spacing: 4px;
   font-weight: 700;
@@ -119,270 +110,248 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(38px, 6vw, 75px);
-  font-weight: 800;
-  line-height: 1.15;
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(38px, 6vw, 70px);
+  line-height: 1.2;
+  font-weight: 400;
   margin-bottom: 25px;
 }
 
-.hero h1 span {
-  color: #6ed8d2;
+.hero h1 em {
+  color: var(--copper);
 }
 
 .hero p {
-  max-width: 600px;
-  color: #e2eeee;
+  color: #d7dfeb;
   line-height: 1.9;
-  margin-bottom: 30px;
-}
-
-.btn {
-  display: inline-block;
-  background: #6ed8d2;
-  color: #123336;
-  padding: 15px 28px;
-  font-weight: 800;
-  font-size: 13px;
-  transition: .3s;
-}
-
-.btn:hover {
-  background: white;
-  transform: translateY(-3px);
+  max-width: 580px;
 }
 
 /* INTRO */
 
 .intro {
-  padding: 75px 8%;
   text-align: center;
+  padding: 75px 8%;
 }
 
 .intro h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: clamp(28px, 4vw, 43px);
-  font-weight: 800;
   margin-bottom: 20px;
 }
 
 .intro h2 span {
-  color: var(--teal);
+  color: #a8753e;
 }
 
 .intro p {
-  max-width: 750px;
+  color: var(--muted);
+  max-width: 700px;
   margin: auto;
   line-height: 1.9;
-  color: #718083;
 }
 
-/* SERVICES */
+/* CONTACT LAYOUT */
 
-.services {
-  padding: 80px 8%;
-  background: var(--light);
+.contact-section {
+  padding: 20px 8% 90px;
 }
 
-.heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.heading .label {
-  color: var(--teal);
-}
-
-.heading h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(30px, 4vw, 45px);
-  font-weight: 800;
-}
-
-.heading p {
-  color: #718083;
-  margin-top: 12px;
-}
-
-.grid {
+.contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 35px;
+  align-items: stretch;
 }
 
-.card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px #0b4c4c0d;
-  transition: .35s;
-}
+/* CONTACT INFO */
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px #0b4c4c20;
-}
-
-.card img {
-  height: 250px;
-  transition: .4s;
-}
-
-.card:hover img {
-  transform: scale(1.04);
-}
-
-.card-content {
-  padding: 28px;
-  position: relative;
-}
-
-.number {
-  color: var(--teal);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-}
-
-.card h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 21px;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #758184;
-  line-height: 1.8;
-}
-
-/* PROCESS */
-
-.process {
-  padding: 85px 8%;
-  background: var(--dark);
+.contact-info {
+  background: var(--navy);
   color: white;
-}
-
-.process-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.process-title h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-  font-weight: 800;
-}
-
-.process-title p {
-  color: #a8bcbc;
-  margin-top: 15px;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-.step {
-  border-top: 2px solid #6ed8d2;
-  padding-top: 25px;
-}
-
-.step strong {
-  font-size: 30px;
-  color: #6ed8d2;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.step h3 {
-  margin: 15px 0;
-  font-size: 18px;
-}
-
-.step p {
-  color: #a8bcbc;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-/* DRAWING */
-
-.drawing {
-  padding: 90px 8%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.drawing img {
-  height: 450px;
+  padding: 40px;
   border-radius: 10px;
 }
 
-.drawing h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(30px, 4vw, 44px);
-  font-weight: 800;
+.contact-info h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.contact-info > p {
+  color: #b9c7d7;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.info-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #34465b;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item small {
+  color: var(--copper);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.info-item h3 {
+  font-size: 17px;
+  margin: 8px 0;
+}
+
+.info-item p,
+.info-item a {
+  color: #c2cedb;
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.info-item a:hover {
+  color: var(--copper);
+}
+
+/* FORM */
+
+.contact-form {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 35px #10233b0c;
+}
+
+.contact-form h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.contact-form > p {
+  color: var(--muted);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field {
   margin-bottom: 20px;
 }
 
-.drawing h2 span {
-  color: var(--teal);
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #46556a;
 }
 
-.drawing p {
-  color: #718083;
-  line-height: 1.9;
-  margin-bottom: 25px;
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dce2e8;
+  background: #fafbfd;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  color: var(--text);
 }
 
-.drawing em {
-  font-family: 'Playfair Display', serif;
-  color: var(--teal);
-  font-size: 25px;
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--copper);
+  background: white;
 }
 
-/* CTA */
-
-.cta {
-  background: #d9f0ed;
-  text-align: center;
-  padding: 75px 8%;
+textarea {
+  min-height: 130px;
+  resize: vertical;
 }
 
-.cta h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
-  margin-bottom: 18px;
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background: var(--copper);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: .3s;
 }
 
-.cta p {
-  color: #5c7475;
-  margin-bottom: 30px;
+.submit-btn:hover {
+  background: var(--navy);
+  color: white;
 }
+
+/* WHATSAPP */
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 22px;
+  background: #25d366;
+  color: white;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: .3s;
+}
+
+.whatsapp:hover {
+  background: #128c7e;
+}
+
+/* FOOTER */
 
 footer {
-  background: #101d20;
+  background: #0b1420;
   color: white;
-  text-align: center;
   padding: 35px 8%;
+  text-align: center;
 }
 
 footer p {
-  color: #a8bcbc;
+  color: #aab7c7;
   font-size: 13px;
   margin-top: 12px;
 }
 
-/* MOBILE */
+/* FLOATING WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  background: #25d366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 40px;
+  font-weight: 700;
+  box-shadow: 0 5px 20px #0002;
+}
+
+/* RESPONSIVE */
 
 @media(max-width: 850px) {
   header {
@@ -392,40 +361,34 @@ footer p {
 
   nav {
     justify-content: center;
+    gap: 15px;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .drawing {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media(max-width: 550px) {
-  .grid,
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
   .hero {
-    min-height: 60vh;
-    padding: 60px 6%;
+    min-height: 45vh;
+    padding: 55px 6%;
   }
 
-  .services,
+  .contact-info,
+  .contact-form {
+    padding: 25px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
   .intro,
-  .drawing {
-    padding: 60px 6%;
-  }
-
-  .drawing img {
-    height: 300px;
+  .contact-section {
+    padding-left: 6%;
+    padding-right: 6%;
   }
 }
 </style>
@@ -449,191 +412,151 @@ footer p {
 </header>
 
 <section class="hero">
+
   <div class="hero-content">
 
-    <div class="label">Interior Solutions • Design • Craftsmanship</div>
+    <div class="eyebrow">LET'S CONNECT</div>
 
     <h1>
-      Spaces Designed<br>
-      for <span>Better Living.</span>
+      Let's Create<br>
+      Something <em>Beautiful.</em>
     </h1>
 
     <p>
-      From modern false ceilings to complete interior
-      transformations, discover thoughtful design
-      solutions crafted around your lifestyle.
+      Have a home, office or interior project in mind?
+      Tell us about your vision. We would love to
+      help bring your dream space to life.
     </p>
 
-    <a href="#services" class="btn">EXPLORE OUR SERVICES</a>
-
   </div>
+
 </section>
 
 <section class="intro">
 
+  <div class="eyebrow">START YOUR PROJECT</div>
+
   <h2>
-    Complete Interior<br>
-    <span>Design Solutions</span>
+    Every Great Space<br>
+    Begins with a <span>Conversation.</span>
   </h2>
 
   <p>
-    We bring together modern design, practical planning
-    and professional finishing to create interiors that
-    look beautiful and feel comfortable.
+    Whether you need a stylish false ceiling, modern
+    interior design, PVC panels or complete home interiors,
+    get in touch to discuss your requirements.
   </p>
 
 </section>
 
-<section class="services" id="services">
+<section class="contact-section">
 
-  <div class="heading">
-    <div class="label">Our Expertise</div>
-    <h2>What We Do Best</h2>
-    <p>Explore our interior design and finishing services.</p>
+  <div class="contact-grid">
+
+    <div class="contact-info">
+
+      <h2>Get in Touch</h2>
+
+      <p>
+        We'd love to hear about your project.
+        Reach out to us using the details below.
+      </p>
+
+      <div class="info-item">
+        <small>PHONE / WHATSAPP</small>
+        <h3>Let's Talk</h3>
+        <a href="https://wa.me/919931203143" target="_blank">
+          +91 XXXXXXXXXX
+        </a>
+      </div>
+
+      <div class="info-item">
+        <small>EMAIL ADDRESS</small>
+        <h3>Email Us</h3>
+        <a href="mailto:YOUR_EMAIL@gmail.com">
+          JSinteriorsolution07@gmail.com
+        </a>
+      </div>
+
+      <div class="info-item">
+        <small>OUR LOCATION</small>
+        <h3>Visit Us</h3>
+        <p>Your Business Address, India</p>
+      </div>
+
+      <div class="info-item">
+        <small>WORKING HOURS</small>
+        <h3>Availability</h3>
+        <p>Monday – Saturday<br>9:00 AM – 7:00 PM</p>
+      </div>
+
+      <a class="whatsapp" href="https://wa.me/919931203143 target="_blank">
+        Chat on WhatsApp
+      </a>
+
+    </div>
+
+    <div class="contact-form">
+
+      <h2>Tell Us About Your Project</h2>
+
+      <p>
+        Fill in your details and we'll help you
+        discuss your interior design requirements.
+      </p>
+
+      <form id="contactForm">
+
+        <div class="form-row">
+
+          <div class="field">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" placeholder="JS interior design" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="9931203143" required>
+          </div>
+
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="JSinteriorsolution07@gmail.com">
+        </div>
+
+        <div class="field">
+          <label for="service">Service Required *</label>
+
+          <select id="service" required>
+            <option value="">Choose a service</option>
+            <option>Interior Design</option>
+            <option>POP Ceiling</option>
+            <option>Gypsum False Ceiling</option>
+            <option>PVC Ceiling / Panels</option>
+            <option>Wall Design</option>
+            <option>2D / 3D Design</option>
+            <option>Complete Home Interior</option>
+            <option>Other</option>
+          </select>
+
+        </div>
+
+        <div class="field">
+          <label for="message">Project Details *</label>
+          <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          SEND INQUIRY ON WHATSAPP
+        </button>
+
+      </form>
+
+    </div>
+
   </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Interior design">
-
-      <div class="card-content">
-        <div class="number">01 / DESIGN</div>
-        <h3>Interior Design</h3>
-        <p>Beautiful living rooms, bedrooms, kitchens and modern home interiors.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Gypsum false ceiling">
-
-      <div class="card-content">
-        <div class="number">02 / CEILING</div>
-        <h3>POP & Gypsum Ceiling</h3>
-        <p>Designer ceilings, elegant lighting layouts and premium finishing.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85" alt="PVC interior panels">
-
-      <div class="card-content">
-        <div class="number">03 / PANELS</div>
-        <h3>PVC Interior Work</h3>
-        <p>Stylish PVC ceiling panels, wall panels and decorative solutions.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Feature wall design">
-
-      <div class="card-content">
-        <div class="number">04 / WALLS</div>
-        <h3>Wall & Feature Design</h3>
-        <p>Modern feature walls, decorative panels and attractive wall designs.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Modern bedroom design">
-
-      <div class="card-content">
-        <div class="number">05 / SPACE</div>
-        <h3>Bedroom & Living Room</h3>
-        <p>Comfortable, functional and stylish spaces designed for everyday living.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=85" alt="Interior design planning">
-
-      <div class="card-content">
-        <div class="number">06 / PLANNING</div>
-        <h3>2D & 3D Design</h3>
-        <p>Interior layouts, space planning and 3D visualization for your project.</p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="process">
-
-  <div class="process-title">
-    <div class="label">Our Working Process</div>
-    <h2>From Idea to Reality</h2>
-    <p>A clear and thoughtful approach to every interior project.</p>
-  </div>
-
-  <div class="steps">
-
-    <div class="step">
-      <strong>01</strong>
-      <h3>Consultation</h3>
-      <p>Understand your needs, style and project requirements.</p>
-    </div>
-
-    <div class="step">
-      <strong>02</strong>
-      <h3>Design Planning</h3>
-      <p>Develop ideas, layouts and design concepts.</p>
-    </div>
-
-    <div class="step">
-      <strong>03</strong>
-      <h3>Execution</h3>
-      <p>Bring the design to life with quality workmanship.</p>
-    </div>
-
-    <div class="step">
-      <strong>04</strong>
-      <h3>Final Finishing</h3>
-      <p>Complete the details and deliver a polished space.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="drawing">
-
-  <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Interior design concept">
-
-  <div>
-    <div class="label">Design Before Execution</div>
-
-    <h2>
-      Visualize Your<br>
-      <span>Dream Interior.</span>
-    </h2>
-
-    <p>
-      Plan your interiors with thoughtful layouts,
-      ceiling designs and modern visual concepts.
-      Our 2D and 3D design services help you
-      understand your space before execution.
-    </p>
-
-    <em>“Great interiors begin with great ideas.”</em>
-
-    <br><br>
-
-    <a href="contact.html" class="btn">DISCUSS YOUR PROJECT</a>
-  </div>
-
-</section>
-
-<section class="cta">
-
-  <h2>Let's Build Your Dream Space</h2>
-
-  <p>
-    Have a home, office or interior project in mind?
-    Let's discuss your ideas.
-  </p>
-
-  <a href="contact.html" class="btn">CONTACT OUR TEAM</a>
 
 </section>
 
@@ -646,6 +569,37 @@ footer p {
   <p>© 2026 JS Interior Design. All Rights Reserved.</p>
 
 </footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/919931203143"
+   target="_blank">
+  WhatsApp
+</a>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("JS interior design").value.trim();
+  const phone = document.getElementById("9931203143").value.trim();
+  const email = document.getElementById("jsinteriorsolution07@gmail.com").value.trim();
+  const service = document.getElementById("Complete interior work").value;
+  const message = document.getElementById("9931203143").value.trim();
+
+  // Replace this with your WhatsApp number.
+  const businessNumber = "919931203143";
+
+  const text =
+    "Hello JS Interior Design!%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Phone: " + encodeURIComponent(phone) + "%0A" +
+    "Email: " + encodeURIComponent(email || "Not provided") + "%0A" +
+    "Service: " + encodeURIComponent(service) + "%0A" +
+    "Project Details: " + encodeURIComponent(message);
+
+  window.open("https://wa.me/" + businessNumber + "?text=" + text, "_blank");
+});
+</script>
 
 </body>
 </html>
